@@ -1,0 +1,1209 @@
+@import url("https://event.travel.com.tw/header2019/css/headerStyle.css");
+@import url("https://event.travel.com.tw/header2019/css/headerStyle.css");
+
+$primaryColor: #0042a1;
+$secondaryColor: #e6a52e;
+$linearGradientPurple: #584cb3;
+$linearGradientBlue: #0077b4;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Noto Sans TC", sans-serif;
+}
+
+body {
+  width: auto;
+}
+
+a {
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+h1 {
+  display: none;
+}
+
+h2 {
+  font-size: 36px;
+  letter-spacing: 2px;
+  text-align: center;
+  margin-bottom: 56px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 5px;
+    background: $secondaryColor;
+  }
+}
+
+h3 {
+  font-size: 28px;
+  letter-spacing: 2px;
+  margin-bottom: 32px;
+  color: darken($primaryColor, 20%);
+}
+
+.logo-in-h3 {
+  position: relative;
+  top: -2px;
+  width: 48px;
+  height: auto;
+  margin: 16px;
+}
+
+h4 {
+  font-size: 24px;
+  letter-spacing: 2px;
+  margin-bottom: 8px;
+  color: darken($primaryColor, 10%);
+
+  i.fa {
+    padding-left: 8px;
+    transition: all 0.3s ease;
+  }
+}
+
+h5 {
+  font-size: 20px;
+  letter-spacing: 1px;
+  color: darken($primaryColor, 20%);
+}
+
+p {
+  font-size: 18px;
+  color: #000;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+li {
+  color: #000;
+  font-size: 16px;
+}
+
+strong {
+  color: darken($primaryColor, 50%);
+  weight: 400;
+}
+
+.section-container {
+  max-width: 1200px;
+  width: auto;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@keyframes titleDropShadow {
+  0% {
+    filter: drop-shadow(0px 0px 8px rgba($secondaryColor, 0));
+  }
+
+  50% {
+    filter: drop-shadow(0px 0px 16px rgba($secondaryColor, 1));
+  }
+
+  100% {
+    filter: drop-shadow(0px 0px 8px rgba($secondaryColor, 0));
+  }
+}
+
+@keyframes shinyEffect {
+  0% {
+    opacity: 0;
+    transform: rotate(20deg);
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    transform: rotate(100deg);
+  }
+}
+
+#share {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 13px 5px 13px 15px;
+}
+#share a {
+  color: #333;
+  font-size: 13pt;
+}
+#share i {
+  margin-right: 0.3em;
+  vertical-align: -0.2em;
+}
+#share i.fa-facebook,
+#share i.fa-line {
+  font-size: 20pt;
+  color: #193479;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 1) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+#share i.fa-line {
+  color: #090;
+}
+#share i.material-icons {
+  padding-left: 5px;
+}
+
+@media (min-width: 769px) {
+  div.wrapper {
+    position: relative;
+
+    div.title-image {
+      position: relative;
+      background-image: url("./images/award2023_background.jpg");
+      object-fit: cover;
+      height: 520px;
+      width: auto;
+      background-position: center;
+      overflow: hidden;
+
+      div.images-group {
+        img.bg-img {
+          position: absolute;
+          overflow: hidden;
+        }
+
+        img.GTAlogo {
+          right: 8%;
+          transform: translateX(-30%);
+          top: 80px;
+        }
+
+        div.title-wrapper {
+          left: 5%;
+          top: 56px;
+          height: 100px;
+          width: auto;
+          position: relative;
+
+          &::after {
+            content: "";
+            position: absolute;
+            background-image: url("./images/award2023_shiny.png");
+            width: 180px;
+            height: 191px;
+            top: -48px;
+            left: 524px;
+            animation: shinyEffect 5s ease infinite;
+            mix-blend-mode: screen;
+          }
+
+          &::before {
+            content: "";
+            position: absolute;
+            background-image: url("./images/award2023_shiny-small.png");
+            width: 90px;
+            height: 97px;
+            top: 136px;
+            left: 192px;
+            animation: shinyEffect 3s ease infinite;
+            mix-blend-mode: screen;
+            z-index: 1;
+          }
+
+          img.bg-title {
+            top: 0;
+            left: 0;
+            animation: titleDropShadow 3s ease infinite;
+          }
+        }
+      }
+    }
+
+    div.main-01 {
+      position: relative;
+      width: auto;
+      background: linear-gradient(175deg, rgba($linearGradientBlue, 1) 30%, rgba($linearGradientPurple, 1) 70%);
+      margin-bottom: 250px;
+
+      &::before {
+        content: "";
+        background-image: url("./images/pattern-background-long.png");
+        mix-blend-mode: overlay;
+        opacity: 0.1;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+      }
+
+      h2 {
+        color: #fff;
+      }
+
+      div.award-information-wrapper {
+        position: relative;
+        width: auto;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 64px;
+        padding: 24px;
+
+        div.award-information {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-around;
+          max-width: 800px;
+          width: auto;
+          height: auto;
+          background: #fff;
+          box-shadow: 12px 12px 18px 0px rgba(darken($primaryColor, 20), 0.8);
+          border-radius: 12px;
+          padding: 24px;
+
+          &:last-child {
+            flex-direction: row-reverse;
+          }
+
+          img {
+            position: relative;
+            bottom: 0;
+            width: auto;
+            height: 200px;
+            transform: scale(1.8);
+          }
+
+          div.award-content {
+            width: 75%;
+            display: flex;
+            flex-direction: column;
+            // justify-content: center;
+
+            h4 {
+              text-align: center;
+              padding: 12px;
+              background: linear-gradient(217deg, rgba($secondaryColor, 0.2), rgba(255, 0, 0, 0) 70.71%),
+                linear-gradient(127deg, rgba($secondaryColor, 0.8), rgba(0, 255, 0, 0) 70.71%),
+                linear-gradient(336deg, rgba($secondaryColor, 0.5), rgba(0, 0, 255, 0) 70.71%);
+              border-radius: 8px;
+              color: darken($secondaryColor, 22);
+              font-size: 28px;
+              font-weight: 700;
+              margin: 0 32px;
+              box-shadow: 2px 2px 5px 0 rgba(darken($secondaryColor, 20), 0.8);
+            }
+
+            p {
+              margin: 12px;
+              padding: 0 20px;
+              text-indent: 2.2em;
+            }
+          }
+        }
+      }
+    }
+
+    div.main-02 {
+      position: relative;
+
+      h3 {
+        text-align: center;
+      }
+
+      &::before {
+        position: absolute;
+        top: -280px;
+        content: "";
+        background-image: url("./images/award2023_background-edge.jpg");
+        height: 252px;
+        object-fit: cover;
+        width: 100%;
+        background-position: center;
+        overflow: hidden;
+        z-index: -1;
+      }
+
+      div.box-honor {
+        margin-bottom: 56px;
+
+        p {
+          padding: 0 32px;
+        }
+      }
+
+      div.winner-trip {
+        padding: 24px;
+
+        div.GTA-winner-trip {
+          display: flex;
+          flex-direction: column;
+          gap: 24px;
+          margin-bottom: 52px;
+
+          h3 {
+            position: relative;
+
+            &::before {
+              content: "";
+              position: absolute;
+              border-top: 2px solid $secondaryColor;
+              width: calc(50% - 200px);
+              top: 38px;
+              left: 0;
+            }
+
+            &::after {
+              content: "";
+              position: absolute;
+              border-top: 2px solid $secondaryColor;
+              width: calc(50% - 200px);
+              top: 38px;
+              right: 0;
+              z-index: -1;
+            }
+          }
+
+          div.GTA-trip-information {
+            position: relative;
+            display: grid;
+            grid-auto-flow: row;
+            grid-template-columns: 1fr 1.5fr;
+            background: #fff;
+            box-shadow: 2px 2px 6px 1px rgba(0, 0, 0, 0.25);
+            border-radius: 12px;
+            top: 0;
+            cursor: pointer;
+            transition: all 0.3s ease;
+
+            &:hover {
+              background: lighten($primaryColor, 65);
+              top: -5px;
+              box-shadow: 8px 8px 32px 1px rgba(0, 0, 0, 0.15);
+
+              &::after {
+                top: -26px;
+                left: -20px;
+                transform: rotate(-30deg) scale(1.05);
+              }
+
+              div.trip-image {
+                &::before {
+                  opacity: 0.2;
+                }
+
+                img {
+                  transform: scale(1.05);
+                }
+              }
+
+              h4 {
+                color: $primaryColor;
+
+                i.fa {
+                  padding-left: 18px;
+                }
+              }
+            }
+
+            &::after {
+              content: "";
+              position: absolute;
+              top: -24px;
+              left: -18px;
+              width: 100px;
+              height: 51px;
+              background-image: url("./images/award-crown.png");
+              object-fit: cover;
+              background-position: center;
+              transform: rotate(-25deg);
+              transition: all 0.3s ease;
+              z-index: 2;
+            }
+
+            h4 {
+              font-size: 32px;
+              font-weight: 700;
+              color: #000;
+            }
+
+            div.trip-image {
+              height: auto;
+              border-radius: 12px 0 0 12px;
+              overflow: hidden;
+
+              &::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: #fff;
+                opacity: 0;
+                transition: all 0.3s ease;
+                z-index: 1;
+              }
+
+              img {
+                width: auto;
+                height: 100%;
+                object-fit: cover;
+                transition: all 0.3s ease;
+              }
+            }
+
+            div.trip-content {
+              padding: 12px;
+              width: auto;
+              display: flex;
+              flex-direction: column;
+              align-items: start;
+              justify-content: center;
+              padding-left: 32px;
+
+              p {
+                color: #333;
+                position: relative;
+                padding-left: 12px;
+
+                &::before {
+                  content: "";
+                  position: absolute;
+                  width: 4px;
+                  height: 120%;
+                  bottom: -4px;
+                  left: 0;
+                  background: lighten($primaryColor, 30);
+                }
+              }
+
+              ul {
+                list-style-position: inside;
+                margin-bottom: 0;
+                padding: 12px;
+                background: lighten($secondaryColor, 40);
+                border-radius: 12px;
+
+                h5 {
+                  i.fa {
+                    color: $secondaryColor;
+                    padding-right: 4px;
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        div.BTC-winner-trip {
+          margin-bottom: 52px;
+
+          h3 {
+            position: relative;
+
+            &::before {
+              content: "";
+              position: absolute;
+              border-top: 2px solid $secondaryColor;
+              width: calc(50% - 200px);
+              top: 38px;
+              left: 0;
+            }
+
+            &::after {
+              content: "";
+              position: absolute;
+              border-top: 2px solid $secondaryColor;
+              width: calc(50% - 200px);
+              top: 38px;
+              right: 0;
+              z-index: -1;
+            }
+          }
+
+          div.BTC-trip-grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            max-width: 1200px;
+            width: auto;
+            position: relative;
+
+            div.BTC-trip-information {
+              position: relative;
+              top: 0;
+              border-radius: 12px;
+              box-shadow: 2px 2px 6px 1px rgba(0, 0, 0, 0.25);
+              overflow: hidden;
+              cursor: pointer;
+              transition: all 0.3s ease;
+
+              &:hover {
+                top: -5px;
+                box-shadow: 8px 8px 32px 1px rgba(0, 0, 0, 0.15);
+
+                img {
+                  transform: scale(1.05);
+                  opacity: 0.8;
+                }
+
+                h4 {
+                  bottom: 4px;
+                  margin-bottom: 0;
+
+                  i.fa {
+                    padding: 18px;
+                  }
+                }
+              }
+
+              &::before {
+                content: "";
+                position: absolute;
+                width: 100%;
+                left: 50%;
+                transform: translateX(-50%);
+                height: 64px;
+                bottom: 0;
+                background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 50%);
+                z-index: 1;
+                transition: all 0.3s ease;
+              }
+
+              h4 {
+                position: absolute;
+                color: #fff;
+                font-size: 20px;
+                line-height: 36px;
+                width: 100%;
+                bottom: 12px;
+                margin-bottom: 0;
+                z-index: 2;
+                transition: all 0.3s ease;
+                filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.5));
+                padding-left: 20px;
+              }
+
+              img {
+                width: 100%;
+                height: auto;
+                object-fit: cover;
+                transition: all 0.3s ease;
+              }
+            }
+          }
+        }
+
+        div.other-winner-trip {
+          h3 {
+            position: relative;
+
+            &::before {
+              content: "";
+              position: absolute;
+              border-top: 2px solid $secondaryColor;
+              width: calc(50% - 222px);
+              top: 38px;
+              left: 0;
+            }
+
+            &::after {
+              content: "";
+              position: absolute;
+              border-top: 2px solid $secondaryColor;
+              width: calc(50% - 222px);
+              top: 38px;
+              right: 0;
+              z-index: -1;
+            }
+          }
+
+          div.other-trip-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+
+            ul.other-winner-trip {
+              list-style-position: inside;
+              list-style-type: "\1F44D";
+              margin-bottom: 0;
+              padding: 12px;
+              background: lighten($secondaryColor, 40);
+              border-radius: 12px;
+
+              h4 {
+                background: $secondaryColor;
+                color: #fff;
+                padding: 4px;
+                padding-left: 8px;
+                border-radius: 8px 8px 0 0;
+              }
+
+              li {
+                padding: 8px;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+                transition: all 0.1s ease;
+
+                &:nth-last-child(1) {
+                  border-bottom: none;
+                }
+
+                &:hover {
+                  background: lighten($secondaryColor, 45);
+                  border-radius: 4px;
+                  cursor: pointer;
+                  color: $secondaryColor;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  #foot {
+    text-align: center;
+    padding: 16px;
+    background: darken($secondaryColor, 10);
+    color: #fff;
+  }
+}
+
+@media (max-width: 768px) {
+  h2 {
+    font-size: 32px;
+    letter-spacing: 2px;
+    text-align: center;
+    margin-bottom: 40px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 60px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60px;
+      height: 5px;
+      background: $secondaryColor;
+    }
+  }
+
+  h3 {
+    font-size: 24px;
+    letter-spacing: 0px;
+    margin-bottom: 16px;
+    color: darken($primaryColor, 20%);
+  }
+
+  .logo-in-h3 {
+    position: relative;
+    top: -2px;
+    width: 20px;
+    height: auto;
+    margin: 8px;
+  }
+
+  h4 {
+    font-size: 24px;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+    color: darken($primaryColor, 10%);
+  }
+
+  h5 {
+    font-size: 20px;
+    letter-spacing: 1px;
+    color: darken($primaryColor, 20%);
+  }
+
+  p {
+    font-size: 16px;
+    color: #000;
+    font-weight: 400;
+    letter-spacing: 1px;
+  }
+
+  li {
+    color: #333;
+    font-size: 14px;
+    font-weight: 400;
+  }
+
+  div.wrapper {
+    position: relative;
+
+    div.title-image {
+      position: relative;
+      background-image: url("./images/award2023_background.jpg");
+      object-fit: cover;
+      height: 420px;
+      width: auto;
+      background-position: center;
+      overflow: hidden;
+
+      div.images-group {
+        img.bg-img {
+          position: absolute;
+          overflow: hidden;
+        }
+
+        img.GTAlogo {
+          width: 100px;
+          height: auto;
+          left: 50%;
+          transform: translateX(-50%);
+          top: 220px;
+        }
+
+        div.title-wrapper {
+          left: 5%;
+          top: 56px;
+          height: 100px;
+          width: auto;
+          position: relative;
+
+          &::after {
+            content: "";
+            position: absolute;
+            background-image: url("./images/award2023_shiny.png");
+            width: 180px;
+            height: 191px;
+            top: -50%;
+            left: 35%;
+            animation: shinyEffect 5s ease infinite;
+            mix-blend-mode: screen;
+          }
+
+          &::before {
+            content: "";
+            position: absolute;
+            background-image: url("./images/award2023_shiny-small.png");
+            width: 90px;
+            height: 97px;
+            top: 50%;
+            left: 15%;
+            animation: shinyEffect 3s ease infinite;
+            mix-blend-mode: screen;
+            z-index: 1;
+          }
+
+          img.bg-title {
+            left: 0;
+            width: 90%;
+            max-width: 567px;
+            animation: titleDropShadow 3s ease infinite;
+          }
+        }
+      }
+    }
+
+    div.main-01 {
+      position: relative;
+      width: auto;
+      background: linear-gradient(175deg, rgba($linearGradientBlue, 1) 30%, rgba($linearGradientPurple, 1) 70%);
+      margin-bottom: 180px;
+
+      &::before {
+        content: "";
+        background-image: url("./images/pattern-background.png");
+        mix-blend-mode: overlay;
+        opacity: 0.1;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+      }
+
+      h2 {
+        color: #fff;
+      }
+
+      div.award-information-wrapper {
+        position: relative;
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+        padding: 0 32px;
+
+        div.award-information {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-around;
+          max-width: 500px;
+          width: 100%;
+          height: auto;
+          background: #fff;
+          box-shadow: 12px 12px 18px 0px rgba(darken($primaryColor, 20), 0.8);
+          border-radius: 12px;
+          padding: 12px;
+
+          img {
+            position: relative;
+            bottom: 0px;
+            width: 80px;
+            height: 100%;
+          }
+
+          div.award-content {
+            width: 75%;
+
+            h4 {
+              text-align: center;
+              padding: 8px;
+              background: linear-gradient(217deg, rgba($secondaryColor, 0.2), rgba(255, 0, 0, 0) 70.71%),
+                linear-gradient(127deg, rgba($secondaryColor, 0.8), rgba(0, 255, 0, 0) 70.71%),
+                linear-gradient(336deg, rgba($secondaryColor, 0.5), rgba(0, 0, 255, 0) 70.71%);
+              border-radius: 8px;
+              color: darken($secondaryColor, 22);
+              font-weight: 700;
+              box-shadow: 2px 2px 5px 0 rgba(darken($secondaryColor, 20), 0.8);
+            }
+
+            p {
+              font-size: 12px;
+              letter-spacing: 0px;
+              padding: 6px;
+            }
+          }
+        }
+      }
+    }
+
+    div.main-02 {
+      position: relative;
+
+      h3 {
+        text-align: center;
+      }
+
+      &::before {
+        position: absolute;
+        top: -250px;
+        content: "";
+        background-image: url("./images/award2023_background-edge.jpg");
+        height: 252px;
+        object-fit: cover;
+        width: 100%;
+        background-position: center;
+        overflow: hidden;
+        z-index: -1;
+      }
+
+      div.box-honor {
+        margin-bottom: 32px;
+
+        p {
+          padding: 0 32px;
+        }
+      }
+
+      div.winner-trip {
+        padding: 8px 32px;
+
+        div.GTA-winner-trip {
+          display: flex;
+          flex-direction: column;
+          gap: 12px;
+          margin-bottom: 52px;
+
+          h3 {
+            position: relative;
+
+            &::before {
+              content: "";
+              position: absolute;
+              border-top: 2px solid $secondaryColor;
+              width: calc(50% - 140px);
+              top: 16px;
+              left: 0;
+            }
+
+            &::after {
+              content: "";
+              position: absolute;
+              border-top: 2px solid $secondaryColor;
+              width: calc(50% - 140px);
+              top: 16px;
+              right: 0;
+              z-index: -1;
+            }
+          }
+
+          div.GTA-trip-information {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: #fff;
+            box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.15);
+            border-radius: 4px;
+            top: 0;
+            cursor: pointer;
+            transition: all 0.3s ease;
+
+            &::after {
+              content: "";
+              position: absolute;
+              top: -20px;
+              left: -32px;
+              width: 100px;
+              height: 51px;
+              background-image: url("./images/award-crown.png");
+              object-fit: cover;
+              background-position: center;
+              transform: rotate(-25deg) scale(0.5);
+              transition: all 0.3s ease;
+              z-index: 2;
+            }
+
+            h4 {
+              font-size: 24px;
+              font-weight: 700;
+              color: $primaryColor;
+            }
+
+            div.trip-image {
+              width: 100%;
+              height: auto;
+              border-radius: 4px;
+              overflow: hidden;
+
+              img {
+                width: 100%;
+                max-height: 360px;
+                height: auto;
+                object-fit: cover;
+                transition: all 0.3s ease;
+                position: relative;
+                left: 50%;
+                transform: translateX(-50%);
+              }
+            }
+
+            div.trip-content {
+              padding: 12px;
+              width: auto;
+              display: flex;
+              flex-direction: column;
+              align-items: start;
+              justify-content: start;
+
+              p {
+                color: #333;
+                position: relative;
+                padding-left: 12px;
+
+                &::before {
+                  content: "";
+                  position: absolute;
+                  width: 4px;
+                  height: 120%;
+                  bottom: -4px;
+                  left: 0;
+                  background: lighten($primaryColor, 30);
+                }
+              }
+
+              ul {
+                list-style-position: inside;
+                margin-bottom: 0;
+                padding: 12px;
+                background: lighten($secondaryColor, 40);
+                border-radius: 2px;
+
+                h5 {
+                  i.fa {
+                    color: $secondaryColor;
+                    padding-right: 4px;
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        div.BTC-winner-trip {
+          margin-bottom: 52px;
+
+          h3 {
+            position: relative;
+
+            &::before {
+              content: "";
+              position: absolute;
+              border-top: 2px solid $secondaryColor;
+              width: calc(50% - 140px);
+              top: 16px;
+              left: 0;
+            }
+
+            &::after {
+              content: "";
+              position: absolute;
+              border-top: 2px solid $secondaryColor;
+              width: calc(50% - 140px);
+              top: 16px;
+              right: 0;
+              z-index: -1;
+            }
+          }
+
+          div.BTC-trip-grid-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 8px;
+            max-width: 768px;
+            width: auto;
+            position: relative;
+
+            div.BTC-trip-information {
+              position: relative;
+              top: 0;
+              border-radius: 4px;
+              box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.2);
+              overflow: hidden;
+              cursor: pointer;
+              transition: all 0.3s ease;
+
+              &::before {
+                content: "";
+                position: absolute;
+                width: 100%;
+                left: 50%;
+                transform: translateX(-50%);
+                height: 60px;
+                bottom: 0;
+                background: linear-gradient(
+                  to bottom,
+                  rgba(0, 0, 0, 0) 0%,
+                  rgba(0, 0, 0, 0.5) 30%,
+                  rgba(0, 0, 0, 0.9) 100%
+                );
+                z-index: 1;
+                transition: all 0.3s ease;
+              }
+
+              h4 {
+                position: absolute;
+                color: #fff;
+                font-size: 12px;
+                line-height: 28px;
+                width: 100%;
+                bottom: 8px;
+                margin-bottom: 0;
+                z-index: 2;
+                transition: all 0.3s ease;
+                filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.5));
+                padding-left: 8px;
+              }
+
+              img {
+                width: 100%;
+                height: auto;
+                object-fit: cover;
+                transition: all 0.3s ease;
+              }
+            }
+          }
+        }
+
+        div.other-winner-trip {
+          h3 {
+            position: relative;
+
+            &::before {
+              content: "";
+              position: absolute;
+              border-top: 2px solid $secondaryColor;
+              width: calc(50% - 160px);
+              top: 16px;
+              left: 0;
+            }
+
+            &::after {
+              content: "";
+              position: absolute;
+              border-top: 2px solid $secondaryColor;
+              width: calc(50% - 160px);
+              top: 16px;
+              right: 0;
+              z-index: -1;
+            }
+          }
+
+          div.other-trip-container {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+
+            ul.other-winner-trip {
+              list-style-position: inside;
+              list-style-type: "\1F44D";
+              margin-bottom: 0;
+              padding: 12px;
+              background: lighten($secondaryColor, 40);
+              border-radius: 12px;
+
+              h4 {
+                background: $secondaryColor;
+                color: #fff;
+                padding: 4px;
+                padding-left: 8px;
+                border-radius: 8px 8px 0 0;
+              }
+
+              li {
+                padding: 8px;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
+                &:nth-last-child(1) {
+                  border-bottom: none;
+                }
+
+                &:hover {
+                  background: lighten($secondaryColor, 45);
+                  border-radius: 4px;
+                  cursor: pointer;
+                  color: $secondaryColor;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  #foot {
+    text-align: center;
+    padding: 16px;
+    background: darken($secondaryColor, 10);
+    color: #fff;
+    font-size: 12px;
+  }
+}
