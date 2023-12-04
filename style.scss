@@ -753,7 +753,7 @@ strong {
 
     div.title-image {
       position: relative;
-      background-image: url("./images/award2023_background.jpg");
+      background-image: url("./images/award2023_background-phone.jpg");
       object-fit: cover;
       height: 420px;
       width: auto;
@@ -927,7 +927,7 @@ strong {
         div.GTA-winner-trip {
           display: flex;
           flex-direction: column;
-          gap: 12px;
+          gap: 24px;
           margin-bottom: 52px;
 
           h3 {
