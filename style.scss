@@ -1,5 +1,4 @@
 @import url("https://event.travel.com.tw/header2019/css/headerStyle.css");
-@import url("https://event.travel.com.tw/header2019/css/headerStyle.css");
 
 $primaryColor: #0042a1;
 $secondaryColor: #e6a52e;
@@ -10,7 +9,6 @@ $linearGradientBlue: #0077b4;
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "Noto Sans TC", sans-serif;
 }
 
 body {
@@ -87,11 +85,6 @@ p {
   letter-spacing: 1px;
 }
 
-li {
-  color: #000;
-  font-size: 16px;
-}
-
 strong {
   color: darken($primaryColor, 50%);
   weight: 400;
@@ -124,12 +117,7 @@ strong {
 #share i.fa-line {
   font-size: 20pt;
   color: #193479;
-  background: linear-gradient(
-    to bottom,
-    rgba(255, 255, 255, 0) 0%,
-    rgba(255, 255, 255, 1) 50%,
-    rgba(255, 255, 255, 0) 100%
-  );
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0) 100%);
 }
 #share i.fa-line {
   color: #090;
@@ -141,6 +129,7 @@ strong {
 @media (min-width: 769px) {
   div.wrapper {
     position: relative;
+    font-family: "Noto Sans TC", sans-serif;
 
     div.title-image {
       position: relative;
@@ -242,8 +231,7 @@ strong {
             h4 {
               text-align: center;
               padding: 12px;
-              background: linear-gradient(217deg, rgba($secondaryColor, 0.2), rgba(255, 0, 0, 0) 70.71%),
-                linear-gradient(127deg, rgba($secondaryColor, 0.8), rgba(0, 255, 0, 0) 70.71%),
+              background: linear-gradient(217deg, rgba($secondaryColor, 0.2), rgba(255, 0, 0, 0) 70.71%), linear-gradient(127deg, rgba($secondaryColor, 0.8), rgba(0, 255, 0, 0) 70.71%),
                 linear-gradient(336deg, rgba($secondaryColor, 0.5), rgba(0, 0, 255, 0) 70.71%);
               border-radius: 8px;
               color: darken($secondaryColor, 22);
@@ -380,8 +368,11 @@ strong {
             }
 
             h4 {
-              font-size: 32px;
+              position: relative;
+              left: -8px;
+              font-size: 24px;
               font-weight: 700;
+              line-height: 24px;
               color: #000;
             }
 
@@ -418,7 +409,7 @@ strong {
               flex-direction: column;
               align-items: start;
               justify-content: center;
-              padding-left: 32px;
+              padding-left: 28px;
 
               p {
                 color: #333;
@@ -429,11 +420,29 @@ strong {
                   content: "";
                   position: absolute;
                   width: 4px;
+                  height: 205%;
+                  top: 0px;
+                  left: 0;
+                  background: lighten($primaryColor, 30);
+                }
+
+                &:nth-last-child(2)::before {
+                  content: "";
+                  position: absolute;
+                  width: 4px;
                   height: 120%;
                   bottom: -4px;
                   left: 0;
                   background: lighten($primaryColor, 30);
                 }
+              }
+
+              span {
+                position: relative;
+                top: -14px;
+                padding: 8px;
+                line-height: 4px;
+                padding-left: 14px;
               }
 
               ul {
@@ -448,6 +457,16 @@ strong {
                     color: $secondaryColor;
                     padding-right: 4px;
                   }
+                }
+
+                li {
+                  color: #333;
+                }
+              }
+
+              ul.line-height-20 {
+                li {
+                  line-height: 30px;
                 }
               }
             }
@@ -529,6 +548,19 @@ strong {
                 transition: all 0.3s ease;
               }
 
+              span {
+                position: absolute;
+                top: 14px;
+                right: -100px;
+                font-size: 16px;
+                padding: 8px 120px;
+                border: 2px solid rgba(darken($primaryColor, 20), 0.8);
+                background: $linearGradientPurple;
+                box-shadow: 2px 2px 6px 2px rgba(white, 0.5);
+                color: yellow;
+                transform: rotate(30deg);
+              }
+
               h4 {
                 position: absolute;
                 color: #fff;
@@ -601,6 +633,7 @@ strong {
               li {
                 padding: 8px;
                 border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+                font-size: 16px;
                 transition: all 0.1s ease;
 
                 &:nth-last-child(1) {
@@ -683,14 +716,15 @@ strong {
     letter-spacing: 1px;
   }
 
-  li {
-    color: #333;
-    font-size: 14px;
-    font-weight: 400;
-  }
-
   div.wrapper {
     position: relative;
+    font-family: "Noto Sans TC", sans-serif;
+
+    li {
+      color: #333;
+      font-size: 14px;
+      font-weight: 400;
+    }
 
     div.title-image {
       position: relative;
@@ -815,8 +849,7 @@ strong {
             h4 {
               text-align: center;
               padding: 8px;
-              background: linear-gradient(217deg, rgba($secondaryColor, 0.2), rgba(255, 0, 0, 0) 70.71%),
-                linear-gradient(127deg, rgba($secondaryColor, 0.8), rgba(0, 255, 0, 0) 70.71%),
+              background: linear-gradient(217deg, rgba($secondaryColor, 0.2), rgba(255, 0, 0, 0) 70.71%), linear-gradient(127deg, rgba($secondaryColor, 0.8), rgba(0, 255, 0, 0) 70.71%),
                 linear-gradient(336deg, rgba($secondaryColor, 0.5), rgba(0, 0, 255, 0) 70.71%);
               border-radius: 8px;
               color: darken($secondaryColor, 22);
@@ -922,9 +955,17 @@ strong {
             }
 
             h4 {
-              font-size: 24px;
+              display: flex;
+              flex-direction: row-reverse;
+              font-size: 20px;
               font-weight: 700;
               color: $primaryColor;
+              gap: 8px;
+
+              i {
+                position: relative;
+                top: 4px;
+              }
             }
 
             div.trip-image {
@@ -962,11 +1003,29 @@ strong {
                   content: "";
                   position: absolute;
                   width: 4px;
-                  height: 120%;
+                  height: 200%;
+                  top: 0px;
+                  left: 0;
+                  background: lighten($primaryColor, 30);
+                }
+
+                &:nth-last-child(2)::before {
+                  content: "";
+                  position: absolute;
+                  width: 4px;
+                  height: 100%;
                   bottom: -4px;
                   left: 0;
                   background: lighten($primaryColor, 30);
                 }
+              }
+
+              span {
+                position: relative;
+                top: -16px;
+                padding: 8px;
+                line-height: 4px;
+                padding-left: 12px;
               }
 
               ul {
@@ -1038,20 +1097,32 @@ strong {
                 transform: translateX(-50%);
                 height: 60px;
                 bottom: 0;
-                background: linear-gradient(
-                  to bottom,
-                  rgba(0, 0, 0, 0) 0%,
-                  rgba(0, 0, 0, 0.5) 30%,
-                  rgba(0, 0, 0, 0.9) 100%
-                );
+                background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 30%, rgba(0, 0, 0, 0.9) 100%);
                 z-index: 1;
                 transition: all 0.3s ease;
               }
 
+              span {
+                position: absolute;
+                top: 10px;
+                right: -110px;
+                font-size: 10px;
+                padding: 2px 120px;
+                border: 2px solid rgba(darken($primaryColor, 20), 0.8);
+                background: $linearGradientPurple;
+                box-shadow: 2px 2px 6px 2px rgba(white, 0.5);
+                color: yellow;
+                transform: rotate(30deg);
+                white-space: nowrap;
+              }
+
               h4 {
+                display: flex;
+                flex-direction: row-reverse;
+                justify-content: start;
                 position: absolute;
                 color: #fff;
-                font-size: 12px;
+                font-size: calc(10% + 8px);
                 line-height: 28px;
                 width: 100%;
                 bottom: 8px;
@@ -1059,7 +1130,14 @@ strong {
                 z-index: 2;
                 transition: all 0.3s ease;
                 filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.5));
-                padding-left: 8px;
+                padding-left: 4px;
+
+                i {
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  padding-right: 4px;
+                }
               }
 
               img {
@@ -1119,6 +1197,7 @@ strong {
 
               li {
                 padding: 8px;
+                font-size: 16px;
                 border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 
                 &:nth-last-child(1) {
